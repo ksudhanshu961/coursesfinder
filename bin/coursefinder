@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+
+import urllib2 as ul2
+import requests
+import sys
+import bs4
+
+print("							By :-")
+print("							    zWR417H")
+print("\n")
+print("						 [Cloud Stored Course Finder v0.1]")
+print("\n")
+
+
+
+def con_chck():
+        try:
+                response = ul2.urlopen('https://www.google.com', timeout = 10)
+                return True
+        except ul2.URLError as err: pass
+        return False
+
+
+if con_chck() == True:
+	print("[+] Internet Connection found :)\n")
+
+	gdork = raw_input("Enter Dork : ")
+	sets = "\xff\xfeh\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00g\x00o\x00o\x00g\x00l\x00e\x00.\x00c\x00o\x00m\x00/\x00s\x00e\x00a\x00r\x00c\x00h\x00?\x00q\x00=\x00"
+
+
+
+	resq = requests.get(sets.decode('utf-16', 'strict') + gdork)
+	resq.raise_for_status()
+	spd = bs4.BeautifulSoup(resq.text, "html.parser")
+	for lnks in spd.find_all('a'):
+		lnks = lnks.get('href')
+
+		if lnks[0:7] == "/url?q=":
+			print("[+] " + "h" + lnks[8:len(lnks)])
+		elif lnks[0:10] == "/search?q=":
+                        print("[+] " + "https://google.com" + lnks[:len(lnks)])
+		elif lnks[0] == "/":
+			print("[+] " + lnks)
+
+else:
+	print("[!] Damn no INTERNET connection found :{")
