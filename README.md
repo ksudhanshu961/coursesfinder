@@ -1,4 +1,4 @@
-# coursefinder
+# coursesfinder
 This tool is written Python Language and made find available courses on Internet.
 
 **You must have apt package manager and Python to install and run this tool.**
@@ -16,4 +16,4 @@ This tool is written Python Language and made find available courses on Internet
 
 4. sudo ./installme.sh
 
-Now, you can use this tool by typing **coursefinder** with or without **sudo**.
+Now, you can use this tool by typing **coursesfinder** with or without **sudo**.
