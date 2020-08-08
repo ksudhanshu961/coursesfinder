@@ -1,4 +1,4 @@
-# coursesfinder
+# coursesfinder v0.5
 This tool is written Python Language and made find available courses on Internet.
 
 **You must have apt package manager and Python to install and run this tool.**
