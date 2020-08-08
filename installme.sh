@@ -1,5 +1,15 @@
 #!/bin/bash
 
+
+
+echo " 		██████╗ ██████╗ ██╗   ██╗██████╗ ███████╗███████╗███████╗██╗███╗   ██╗██████╗ ███████╗██████╗"
+echo "		██╔════╝██╔═══██╗██║   ██║██╔══██╗██╔════╝██╔════╝██╔════╝██║████╗  ██║██╔══██╗██╔════╝██╔══██╗"
+echo "		██║     ██║   ██║██║   ██║██████╔╝███████╗█████╗  █████╗  ██║██╔██╗ ██║██║  ██║█████╗  ██████╔╝"
+echo "		██║     ██║   ██║██║   ██║██╔══██╗╚════██║██╔══╝  ██╔══╝  ██║██║╚██╗██║██║  ██║██╔══╝  ██╔══██╗"
+echo "		╚██████╗╚██████╔╝╚██████╔╝██║  ██║███████║███████╗██║     ██║██║ ╚████║██████╔╝███████╗██║  ██║"
+echo " 		 ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝  ╚═╝"
+
+
 printf "                                                By:- "
 printf "\n"
 printf "                                                   zWR417H"
@@ -11,11 +21,12 @@ if [ $? -eq 0 ]; then
 	sudo apt install python-pip
 	sudo pip install -r requirements.txt
 	sudo chmod +x bin/coursesfinder
-	sudo mv bin/coursesfinder /usr/bin/
+	sudo cp bin/coursesfinder /bin/
 	printf "\n"
 	printf "\n"
 	echo "[+] All Done !"
 	echo "[+] Now you can run this tool from anywhere in terminal"
+	less README.md
 else
 	echo "[!] No Internet Connection found "
 fi
