@@ -4,13 +4,12 @@ import urllib2 as ul2
 import requests
 import sys
 import bs4
+from pyfiglet import Figlet
 
-print("							By :-")
-print("							    zWR417H")
+cstm = Figlet(font = 'graffiti')
+print(cstm.renderText("zWR417H"))
+print("						 [Cloud Stored Course Finder v0.5]")
 print("\n")
-print("						 [Cloud Stored Course Finder v0.1]")
-print("\n")
-
 
 
 def con_chck():
@@ -24,14 +23,25 @@ def con_chck():
 if con_chck() == True:
 	print("[+] Internet Connection found :)\n")
 
-	gdork = raw_input("Enter Dork : ")
+	cname = raw_input("Enter Course name of your choice : ")
+	print("\n")
+	typeded = raw_input("Enter the Type of course : ")
+	print("\n")
+	ref1 = "."
+	ref2 = "."
+	ref3 = "."
+	print("Searching ..." + ref1 + ref2 + ref3)
+	print("\n")
+	mobleys = "\xff\xfes\x00i\x00t\x00e\x00:\x00f\x00a\x00c\x00e\x00b\x00o\x00o\x00k\x00.\x00c\x00o\x00m\x00"
 	sets = "\xff\xfeh\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00g\x00o\x00o\x00g\x00l\x00e\x00.\x00c\x00o\x00m\x00/\x00s\x00e\x00a\x00r\x00c\x00h\x00?\x00q\x00=\x00"
 
 
 
-	resq = requests.get(sets.decode('utf-16', 'strict') + gdork)
+	resq = requests.get(sets.decode('utf-16', 'strict') + typeded + cname + mobleys.decode('utf-16', 'strict'))
 	resq.raise_for_status()
 	spd = bs4.BeautifulSoup(resq.text, "html.parser")
+	print("[!] Results >>")
+	print("\n")
 	for lnks in spd.find_all('a'):
 		lnks = lnks.get('href')
 
