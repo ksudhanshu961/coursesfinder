@@ -6,7 +6,7 @@ from pyfiglet import Figlet
 
 cstm = Figlet(font = 'graffiti')
 print(cstm.renderText("zWR417H"))
-print("						 [Cloud Stored Course Finder v0.5]")
+print("						 [Cloud Stored Course Finder v2.0]")
 print("\n")
 
 
