@@ -12,7 +12,7 @@ print("\n")
 
 def con_chck():
 	try:
-		r =	requests.get("https://google.com")
+		r = requests.get("https://google.com")
 		return r.status_code
 	except Exception:
 		print("\nSomething went wrong!")
