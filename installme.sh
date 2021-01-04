@@ -21,7 +21,7 @@ if [ $? -eq 0 ]; then
 	sudo apt install python-pip
 	sudo pip install -r requirements.txt
 	sudo chmod +x bin/coursesfinder
-	sudo mv bin/coursesfinder /bin/
+	sudo mv bin/coursesfinder /usr/bin/
 	printf "\n"
 	printf "\n"
 	echo "[+] All Done !"
