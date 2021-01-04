@@ -29,4 +29,4 @@ if [ $? -eq 0 ]; then
 	less README.md
 else
 	echo "[!] No Internet Connection found "
-fi
+f
