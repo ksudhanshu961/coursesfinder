@@ -8,7 +8,7 @@ This tool is written Python Language and made find available courses on Internet
 1. gitclone or download this tool.
 
     **To gitclone**
-    > sudo git clone https://github.com/zWR417H/coursesfinder.git
+    > sudo git clone https://github.com/ksudhanshu961/coursesfinder.git
 
 2. cd coursefinder
 
